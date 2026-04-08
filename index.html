@@ -4,31 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLOOM｜表参道 表参道駅の美容室｜髪質改善・オーガニックカラー</title>
-  <meta name="description" content="表参道駅徒歩2分の美容室BLOOM。髪質改善とオーガニックカラーで、あなた本来の美しさを引き出します。落ち着いた空間で丁寧な施術をお届けします。">
-  <link rel="canonical" href="https://example.com/">
-
-  <!-- OGP -->
-  <meta property="og:title" content="BLOOM｜表参道 表参道駅の美容室｜髪質改善・オーガニックカラー">
-  <meta property="og:description" content="表参道駅徒歩2分の美容室BLOOM。髪質改善とオーガニックカラーで、あなた本来の美しさを引き出します。">
-  <meta property="og:image" content="https://example.com/assets/ogp.png">
-  <meta property="og:url" content="https://example.com/">
+  <title>Selqune｜青山 外苑前駅の美容室｜髪質改善・トータルビューティー</title>
+  <meta name="description" content="Selquneは青山エリアの路面店、髪質改善とトータルビューティーに寄り添う美容室です。丁寧なカウンセリングと落ち着いた空間で、髪と気分が整うひとときをご案内いたします。">
+  <meta property="og:title" content="Selqune｜青山 外苑前駅の美容室｜髪質改善・トータルビューティー">
+  <meta property="og:description" content="青山エリアの路面店。髪質改善とトータルビューティーに寄り添う、静かで洗練された美容室 Selqune。">
+  <meta property="og:image" content="https://placehold.co/1200x630">
+  <meta property="og:url" content="https://example.com/bloom">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- フォント -->
+  <meta name="theme-color" content="#1C1B19">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231C1B19'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' fill='%23F7F5F2' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Shippori+Mincho:wght@400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,300&family=Shippori+Mincho:wght@400&family=Noto+Sans+JP:wght@300;400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,300&family=Shippori+Mincho:wght@400&family=Noto+Sans+JP:wght@300;400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,300&family=Shippori+Mincho:wght@400&family=Noto+Sans+JP:wght@300;400&display=swap"></noscript>
   <style>
-    /* ========================================
-       CSS変数（グレージュ × モード）
-       ======================================== */
     :root {
       --bg: #F7F5F2;
       --bg-alt: #EFECE7;
       --bg-dark: #1C1B19;
-      --bg-rgb: 247, 245, 242;
       --text: #1A1918;
       --text-mid: #44403B;
       --text-light: #6E6860;
@@ -36,74 +31,84 @@
       --line: #D4CDC3;
       --r: 3px;
       --mw: 1080px;
-      --font-display: 'Playfair Display', 'Georgia', serif;
-      --font-ja-heading: 'Shippori Mincho', 'Yu Mincho', '游明朝', serif;
-      --font-body: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      --bg-rgb: 247, 245, 242;
+      --font-display: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
+      --font-heading: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      --header-h: 76px;
+      --section-space: 120px;
+      --sticky-h: 88px;
+      --shadow-soft: 0 24px 60px rgba(28, 27, 25, 0.08);
     }
 
-    /* ========================================
-       リセット・ベース
-       ======================================== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
+      margin: 0;
       font-family: var(--font-body);
       font-size: 14.5px;
       font-weight: 300;
       line-height: 1.9;
       color: var(--text);
-      background-color: var(--bg);
+      background: var(--bg);
+      letter-spacing: 0.02em;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 72px; /* モバイルスティッキーCTA用 */
+      text-rendering: optimizeLegibility;
     }
-    @media (min-width: 769px) {
-      body { padding-bottom: 0; }
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; text-decoration: none; }
-    ul, ol { list-style: none; }
-    button { font: inherit; cursor: pointer; border: none; background: none; }
 
-    /* スキップナビ */
-    .skip-nav {
-      position: absolute;
-      top: -100%;
-      left: 16px;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      background: var(--bg-alt);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
       z-index: 200;
-      padding: 8px 16px;
+      padding: 12px 16px;
       background: var(--bg-dark);
-      color: #fff;
+      color: var(--bg);
       border-radius: var(--r);
-      font-size: 0.85rem;
-    }
-    .skip-nav:focus {
-      top: 16px;
+      transform: translateY(-140%);
+      transition: transform 0.3s ease;
     }
 
-    /* フォーカス */
+    .skip-link:focus-visible {
+      transform: translateY(0);
+    }
+
     :focus-visible {
       outline: 2px solid var(--accent);
-      outline-offset: 2px;
+      outline-offset: 4px;
     }
 
-    /* ========================================
-       共通コンポーネント
-       ======================================== */
     .container {
-      max-width: var(--mw);
+      width: min(calc(100% - 40px), var(--mw));
       margin: 0 auto;
-      padding: 0 24px;
     }
 
-    /* セクション */
     .section {
-      padding: 120px 0;
-    }
-    @media (max-width: 768px) {
-      .section { padding: 72px 0; }
+      padding: var(--section-space) 0;
     }
 
-    /* セクション区切り線 */
     .section-divider {
       border: none;
       border-top: 1px solid var(--line);
@@ -111,852 +116,1283 @@
       margin: 0 auto;
     }
 
-    /* セクションナンバー */
+    .section-head {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 44px;
+    }
+
     .section-number {
-      display: block;
       font-family: var(--font-display);
       font-size: 0.72rem;
       font-weight: 400;
-      color: var(--text-light);
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
+      color: var(--accent);
+      letter-spacing: 0.18em;
     }
 
-    /* セクションタイトル */
     .section-title {
+      margin: 0;
       font-family: var(--font-display);
       font-size: clamp(2rem, 4.5vw, 2.8rem);
       font-weight: 400;
-      letter-spacing: 0.04em;
-      line-height: 1.2;
-      margin-bottom: 4px;
+      line-height: 1.05;
+      letter-spacing: 0.03em;
     }
 
-    /* セクション日本語サブ */
     .section-subtitle {
-      font-family: var(--font-ja-heading);
+      margin: 0;
+      font-family: var(--font-heading);
       font-size: 0.85rem;
       font-weight: 400;
       color: var(--text-light);
-      margin-bottom: 48px;
     }
 
-    /* ボタン */
+    .eyebrow {
+      margin: 0 0 16px;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
     .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      font-size: 0.85rem;
-      font-family: var(--font-body);
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      border-radius: var(--r);
-      transition: opacity 0.3s ease;
-      min-height: 44px;
-      min-width: 44px;
-      text-align: center;
-    }
-    .btn:hover { opacity: 0.8; }
-    .btn-primary {
-      background-color: var(--accent);
-      color: #fff;
-    }
-    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 14px 24px;
       border: 1px solid var(--accent);
-      color: var(--accent);
-    }
-    .btn-hero {
-      background-color: rgba(255,255,255,0.15);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.5);
-      backdrop-filter: blur(4px);
-    }
-    .btn-cta {
-      background-color: var(--accent);
-      color: #fff;
-      padding: 16px 40px;
+      border-radius: 999px;
       font-size: 0.9rem;
-    }
-    .btn-cta-outline {
-      border: 1px solid rgba(255,255,255,0.5);
-      color: #fff;
-      padding: 14px 32px;
-    }
-    .btn-nav {
-      background-color: var(--accent);
-      color: #fff;
-      padding: 10px 24px;
-      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
     }
 
-    /* フェードインアニメーション */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
     }
 
-    /* prefers-reduced-motion */
-    @media (prefers-reduced-motion: reduce) {
-      .fade-in {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-      .marquee-inner {
-        animation: none;
-      }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
     }
 
-    /* ========================================
-       ヘッダー
-       ======================================== */
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-ghost {
+      border-color: rgba(247, 245, 242, 0.35);
+      color: var(--bg);
+      background: transparent;
+    }
+
     .header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 100;
-      padding: 16px 0;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-      background-color: transparent;
+      z-index: 120;
       border-bottom: 1px solid transparent;
+      background: transparent;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
+
     .header.scrolled {
-      background-color: rgba(var(--bg-rgb), 0.95);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(8px);
+      background: rgba(var(--bg-rgb), 0.94);
+      border-bottom-color: var(--line);
+      backdrop-filter: blur(10px);
     }
-    .header .container {
+
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-    .header-logo {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-    }
-    .header.scrolled .header-logo { color: var(--text); }
-    .header:not(.scrolled) .header-logo { color: #fff; }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-    }
-    .nav-links a {
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
-      transition: opacity 0.3s;
-    }
-    .nav-links a:hover { opacity: 0.7; }
-    .header:not(.scrolled) .nav-links a { color: #fff; }
-    .header.scrolled .nav-links a { color: var(--text-mid); }
-    .header:not(.scrolled) .btn-nav {
-      background-color: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.4);
-      backdrop-filter: blur(4px);
+      min-height: var(--header-h);
+      gap: 20px;
     }
 
-    /* ハンバーガー（モバイル） */
-    .nav-toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .nav-toggle span {
-      display: block;
-      width: 22px;
-      height: 1.5px;
-      background-color: #fff;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-    .header.scrolled .nav-toggle span { background-color: var(--text); }
-    @media (max-width: 768px) {
-      .nav-links, .btn-nav-wrap { display: none; }
-      .nav-toggle { display: flex; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgba(var(--bg-rgb), 0.98);
-        backdrop-filter: blur(12px);
-        padding: 24px;
-        gap: 20px;
-        border-bottom: 1px solid var(--line);
-      }
-      .nav-links.open a { color: var(--text); }
-    }
-
-    /* ========================================
-       ヒーロー（パターン1：全画面写真＋中央ロゴ）
-       ======================================== */
-    .hero {
-      position: relative;
-      height: 100vh;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      background-image: url('https://placehold.co/1920x1080/8a7d6b/ffffff?text=BLOOM+HERO');
-      background-size: cover;
-      background-position: center;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.35);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-    .hero-logo {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      margin-bottom: 8px;
-    }
-    .hero-sub {
-      font-family: var(--font-ja-heading);
-      font-size: 0.85rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      opacity: 0.85;
-      margin-bottom: 32px;
-    }
-    .hero-scroll {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      font-family: var(--font-display);
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      opacity: 0.6;
-    }
-    .hero-scroll::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 32px;
-      background-color: rgba(255,255,255,0.5);
-      margin: 8px auto 0;
-    }
-
-    /* ========================================
-       マーキーテキスト
-       ======================================== */
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 40px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .marquee-inner {
-      display: inline-block;
-      animation: marquee 25s linear infinite;
-    }
-    .marquee-inner span {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--text-light);
-      letter-spacing: 0.08em;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* ========================================
-       コンセプト（パターンA：3段構造）
-       ======================================== */
-    .concept-block {
-      display: flex;
-      flex-direction: column;
-      gap: 80px;
-    }
-    .concept-item {
+    .brand {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-    .concept-item:nth-child(even) .concept-text { order: 2; }
-    .concept-item:nth-child(even) .concept-image { order: 1; }
-    .concept-label {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      color: var(--text-light);
-      margin-bottom: 12px;
-    }
-    .concept-item h3 {
-      font-family: var(--font-ja-heading);
-      font-size: 1.15rem;
-      font-weight: 400;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-    .concept-item p {
-      font-family: var(--font-ja-heading);
-      font-size: 0.92rem;
-      font-weight: 400;
-      line-height: 2.2;
-      color: var(--text-mid);
-    }
-    .concept-image img {
-      width: 100%;
-      border-radius: var(--r);
-    }
-    @media (max-width: 768px) {
-      .concept-item {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      .concept-item:nth-child(even) .concept-text { order: 1; }
-      .concept-item:nth-child(even) .concept-image { order: 2; }
+      gap: 4px;
     }
 
-    /* ========================================
-       こだわり（Features）
-       ======================================== */
-    .features-list {
-      display: flex;
-      flex-direction: column;
-      gap: 80px;
-    }
-    .feature-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-    .feature-item:nth-child(even) { direction: rtl; }
-    .feature-item:nth-child(even) > * { direction: ltr; }
-    .feature-number {
+    .brand-logo {
+      margin: 0;
       font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+    }
+
+    .brand-meta {
+      margin: 0;
       font-size: 0.72rem;
       color: var(--text-light);
       letter-spacing: 0.1em;
-      margin-bottom: 12px;
-      display: block;
     }
-    .feature-item h3 {
-      font-family: var(--font-ja-heading);
-      font-size: 1.05rem;
-      font-weight: 400;
-      margin-bottom: 12px;
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
-    .feature-item p {
-      font-size: 0.88rem;
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav a {
+      font-size: 0.82rem;
       color: var(--text-mid);
-      line-height: 2;
     }
-    .feature-image img {
+
+    .nav-cta {
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      min-height: 48px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(var(--bg-rgb), 0.74);
+      color: var(--text);
+    }
+
+    .menu-toggle-line {
+      position: relative;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-toggle-line::before,
+    .menu-toggle-line::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-toggle-line::before {
+      transform: translateY(-6px);
+    }
+
+    .menu-toggle-line::after {
+      transform: translateY(6px);
+    }
+
+    .menu-open .menu-toggle-line {
+      background: transparent;
+    }
+
+    .menu-open .menu-toggle-line::before {
+      transform: rotate(45deg);
+    }
+
+    .menu-open .menu-toggle-line::after {
+      transform: rotate(-45deg);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      color: var(--bg);
+      background: var(--bg-dark);
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-media img {
       width: 100%;
-      border-radius: var(--r);
-      aspect-ratio: 3/4;
+      height: 100%;
       object-fit: cover;
     }
-    @media (max-width: 768px) {
-      .feature-item,
-      .feature-item:nth-child(even) {
-        grid-template-columns: 1fr;
-        direction: ltr;
-        gap: 20px;
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(28, 27, 25, 0.3) 0%, rgba(28, 27, 25, 0.48) 100%),
+        linear-gradient(120deg, rgba(28, 27, 25, 0.14) 0%, rgba(122, 106, 88, 0.18) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 120px 20px 96px;
+    }
+
+    .hero-stack {
+      display: grid;
+      gap: 18px;
+      max-width: 720px;
+    }
+
+    .hero-kicker {
+      margin: 0;
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(247, 245, 242, 0.8);
+    }
+
+    .hero-logo {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(3.6rem, 13vw, 8rem);
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      line-height: 0.95;
+      text-indent: 0.2em;
+    }
+
+    .hero-sub {
+      margin: 0 auto;
+      max-width: 34em;
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 2.1;
+      color: rgba(247, 245, 242, 0.9);
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      left: 50%;
+      bottom: 28px;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+      transform: translateX(-50%);
+      color: rgba(247, 245, 242, 0.74);
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll::after {
+      content: "";
+      width: 1px;
+      height: 56px;
+      background: rgba(247, 245, 242, 0.4);
+      animation: scroll-line 1.8s ease-in-out infinite;
+      transform-origin: top center;
+    }
+
+    @keyframes scroll-line {
+      0%, 100% {
+        transform: scaleY(0.45);
+        opacity: 0.35;
+      }
+      50% {
+        transform: scaleY(1);
+        opacity: 1;
       }
     }
 
-    /* ========================================
-       メニュー（定義リスト型）
-       ======================================== */
-    .menu-categories {
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-alt);
     }
-    .menu-category h3 {
+
+    .marquee-inner {
+      display: inline-block;
+      padding: 14px 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-light);
+      animation: marquee 25s linear infinite;
+    }
+
+    .marquee-inner span {
+      padding-right: 42px;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .concept-grid {
+      display: grid;
+      gap: 28px;
+    }
+
+    .concept-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(240px, 0.95fr);
+      gap: 34px;
+      align-items: center;
+      padding: 32px;
+      background: linear-gradient(180deg, rgba(239, 236, 231, 0.72) 0%, rgba(247, 245, 242, 0.96) 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .concept-item:nth-child(even) .concept-image {
+      order: -1;
+    }
+
+    .concept-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .concept-item h3 {
+      margin: 0 0 12px;
+      font-family: var(--font-heading);
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .concept-item p {
+      margin: 0;
+      color: var(--text-mid);
+    }
+
+    .concept-image {
+      overflow: hidden;
+      border-radius: var(--r);
+    }
+
+    .concept-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+    }
+
+    .features-list {
+      display: grid;
+      gap: 44px;
+    }
+
+    .feature-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .feature-item:nth-child(even) .feature-image {
+      order: 1;
+    }
+
+    .feature-image {
+      overflow: hidden;
+      border-radius: var(--r);
+    }
+
+    .feature-image img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .feature-number {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      color: var(--accent);
+      letter-spacing: 0.18em;
+    }
+
+    .feature-text h3 {
+      margin: 0 0 12px;
+      font-family: var(--font-heading);
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      font-weight: 400;
+    }
+
+    .feature-text p {
+      margin: 0;
+      color: var(--text-mid);
+    }
+
+    .feature-note {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text-light);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+    }
+
+    .menu-layout {
+      display: grid;
+      gap: 30px;
+    }
+
+    .menu-panel {
+      padding: 32px;
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+    }
+
+    .menu-panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: end;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .menu-panel-head h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+    }
+
+    .menu-panel-head p {
+      margin: 0;
+      color: var(--text-light);
+    }
+
+    .menu-list {
+      display: grid;
+      gap: 18px;
+      margin: 0;
+    }
+
+    .menu-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px 20px;
+      align-items: start;
+      padding-bottom: 18px;
+      border-bottom: 1px dotted var(--line);
+    }
+
+    .menu-item:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .menu-item dt {
+      margin: 0;
+    }
+
+    .menu-item-name {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .menu-meta {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    .menu-price {
+      margin: 0;
+      text-align: right;
       font-family: var(--font-display);
       font-size: 1rem;
       font-weight: 400;
-      letter-spacing: 0.08em;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--line);
-    }
-    .menu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 12px 0;
-      border-bottom: 1px dotted var(--line);
-      gap: 16px;
-    }
-    .menu-item dt {
-      font-size: 0.85rem;
-      font-weight: 300;
-    }
-    .menu-item dd {
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 400;
       white-space: nowrap;
     }
+
     .tax {
       font-family: var(--font-body);
       font-size: 0.7rem;
       color: var(--text-light);
     }
-    .menu-note {
-      margin-top: 24px;
-      font-size: 0.8rem;
+
+    .menu-caption {
+      margin: 16px 0 0;
       color: var(--text-light);
-    }
-    .menu-cta {
-      text-align: center;
-      margin-top: 48px;
+      font-size: 0.8rem;
     }
 
-    /* ========================================
-       スタイルギャラリー（横スクロール）
-       ======================================== */
+    .menu-cta-box {
+      display: grid;
+      gap: 14px;
+      justify-items: start;
+      padding: 28px 0 0;
+    }
+
+    .menu-cta-copy {
+      margin: 0;
+      color: var(--text-mid);
+    }
+
     .gallery-scroll {
       display: flex;
+      gap: 18px;
       overflow-x: auto;
+      padding-bottom: 8px;
       scroll-snap-type: x mandatory;
-      gap: 16px;
-      padding: 0 24px 16px;
-      -webkit-overflow-scrolling: touch;
     }
-    .gallery-scroll::-webkit-scrollbar { height: 4px; }
-    .gallery-scroll::-webkit-scrollbar-track { background: var(--bg-alt); }
-    .gallery-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
+
+    .gallery-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .gallery-scroll::-webkit-scrollbar-thumb {
+      background: var(--line);
+      border-radius: 999px;
+    }
+
     .gallery-card {
-      flex: 0 0 260px;
+      min-width: 260px;
+      max-width: 260px;
       scroll-snap-align: start;
     }
+
     .gallery-card img {
       width: 260px;
       height: 347px;
       object-fit: cover;
       border-radius: var(--r);
     }
+
     .gallery-caption {
+      margin: 12px 0 0;
       font-family: var(--font-display);
-      font-size: 0.78rem;
-      color: var(--text-light);
-      margin-top: 8px;
+      font-size: 0.9rem;
+      color: var(--text-mid);
       letter-spacing: 0.04em;
     }
 
-    /* ========================================
-       スタッフ
-       ======================================== */
     .staff-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
     }
-    .staff-card { text-align: center; }
+
+    .staff-card {
+      display: grid;
+      gap: 18px;
+      padding: 18px;
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+    }
+
     .staff-card img {
       width: 100%;
-      max-width: 320px;
-      aspect-ratio: 4/5;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       border-radius: var(--r);
-      margin: 0 auto 16px;
-    }
-    .staff-card h3 {
-      font-family: var(--font-ja-heading);
-      font-size: 1rem;
-      font-weight: 400;
-      margin-bottom: 4px;
-    }
-    .staff-role {
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      color: var(--text-light);
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-    }
-    .staff-message {
-      font-size: 0.85rem;
-      color: var(--text-mid);
-      line-height: 1.9;
-      max-width: 320px;
-      margin: 0 auto;
     }
 
-    /* ========================================
-       サロン写真（グリッド）
-       ======================================== */
+    .staff-card h3 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .staff-role {
+      margin: -8px 0 0;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .staff-message {
+      margin: 0;
+      color: var(--text-mid);
+    }
+
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
     }
-    .photo-item { position: relative; overflow: hidden; }
+
+    .photo-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--r);
+      background: var(--bg-alt);
+    }
+
     .photo-item img {
       width: 100%;
-      aspect-ratio: 4/3;
+      aspect-ratio: 4 / 3;
       object-fit: cover;
-      border-radius: var(--r);
     }
+
     .photo-caption {
       position: absolute;
-      bottom: 8px;
-      left: 8px;
+      left: 14px;
+      bottom: 12px;
+      padding: 6px 10px;
+      background: rgba(28, 27, 25, 0.66);
+      color: var(--bg);
+      border-radius: 999px;
       font-family: var(--font-display);
-      font-size: 0.7rem;
-      color: #fff;
-      letter-spacing: 0.06em;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    }
-    @media (max-width: 768px) {
-      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
     }
 
-    /* ========================================
-       アクセス
-       ======================================== */
-    .access-content {
+    .access-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 32px;
+      align-items: start;
     }
-    .access-info dl {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 12px 16px;
-    }
-    .access-info dt {
-      font-size: 0.82rem;
-      color: var(--text-light);
-    }
-    .access-info dd {
-      font-size: 0.88rem;
-    }
-    .access-info a {
-      color: var(--accent);
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-    .access-map iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
+
+    .access-card,
+    .reservation-card {
+      padding: 32px;
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
       border-radius: var(--r);
     }
-    @media (max-width: 768px) {
-      .access-content { grid-template-columns: 1fr; }
+
+    .access-list {
+      display: grid;
+      gap: 18px;
+      margin: 0;
     }
 
-    /* ========================================
-       CTA
-       ======================================== */
-    .cta-section {
-      background-color: var(--bg-dark);
-      color: #fff;
-      text-align: center;
-    }
-    .cta-catch {
-      font-family: var(--font-display);
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-    }
-    .cta-sub {
-      font-family: var(--font-ja-heading);
-      font-size: 0.85rem;
-      opacity: 0.7;
-      margin-bottom: 32px;
-    }
-    .cta-buttons {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
+    .access-row {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
     }
 
-    /* ========================================
-       フッター
-       ======================================== */
-    .footer {
-      padding: 48px 0 32px;
-      text-align: center;
-      border-top: 1px solid var(--line);
+    .access-row:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
     }
-    .footer-logo {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
+
+    .access-row dt {
       font-weight: 400;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-    }
-    .footer-sns {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-    .footer-sns a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      transition: opacity 0.3s;
-      font-size: 0.75rem;
       color: var(--text-mid);
     }
-    .footer-sns a:hover { opacity: 0.7; }
-    .footer-copy {
-      font-size: 0.72rem;
-      color: var(--text-light);
+
+    .access-row dd,
+    .access-row p {
+      margin: 0;
+      color: var(--text);
     }
 
-    /* ========================================
-       モバイルスティッキーCTA
-       ======================================== */
-    .sticky-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 90;
-      padding: 12px 16px;
-      background-color: var(--bg-dark);
-      text-align: center;
+    .access-map {
+      overflow: hidden;
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      min-height: 100%;
+      background: var(--bg-alt);
     }
-    .sticky-cta a {
+
+    .access-map iframe {
       display: block;
       width: 100%;
-      padding: 14px;
-      background-color: var(--accent);
-      color: #fff;
-      font-size: 0.85rem;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+    }
+
+    .reservation-copy {
+      margin: 0 0 18px;
+      color: var(--text-mid);
+    }
+
+    .reservation-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .reservation-links .btn {
+      min-height: 58px;
+      padding-inline: 18px;
+    }
+
+    .cta-section {
+      background: var(--bg-dark);
+      color: var(--bg);
+    }
+
+    .cta-inner {
+      display: grid;
+      gap: 18px;
+      text-align: center;
+      justify-items: center;
+    }
+
+    .cta-catch {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.4rem);
       font-weight: 400;
       letter-spacing: 0.08em;
-      border-radius: var(--r);
-      min-height: 44px;
-    }
-    @media (min-width: 769px) {
-      .sticky-cta { display: none; }
     }
 
-    /* ========================================
-       noscript対応
-       ======================================== */
-    noscript .fade-in {
-      opacity: 1 !important;
-      transform: none !important;
+    .cta-sub {
+      margin: 0;
+      max-width: 38em;
+      color: rgba(247, 245, 242, 0.82);
     }
-    noscript .marquee-inner {
-      animation: none !important;
+
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    noscript .nav-links {
-      display: flex !important;
+
+    .footer {
+      padding: 36px 0 calc(36px + var(--sticky-h));
+      background: var(--bg-dark);
+      color: rgba(247, 245, 242, 0.92);
+      border-top: 1px solid rgba(247, 245, 242, 0.12);
+    }
+
+    .footer-inner {
+      display: grid;
+      gap: 16px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 0.14em;
+    }
+
+    .footer-meta,
+    .footer-copy {
+      margin: 0;
+      color: rgba(247, 245, 242, 0.68);
+      font-size: 0.8rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: rgba(247, 245, 242, 0.86);
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .sticky-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 110;
+      display: none;
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      background: rgba(28, 27, 25, 0.96);
+      border-top: 1px solid rgba(247, 245, 242, 0.12);
+      backdrop-filter: blur(8px);
+    }
+
+    .sticky-cta .btn {
+      width: 100%;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1024px) {
+      :root {
+        --section-space: 80px;
+      }
+
+      .access-layout,
+      .feature-item,
+      .concept-item {
+        grid-template-columns: 1fr;
+      }
+
+      .concept-item:nth-child(even) .concept-image,
+      .feature-item:nth-child(even) .feature-image {
+        order: initial;
+      }
+
+      .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-wrap {
+        position: fixed;
+        inset: var(--header-h) 0 auto 0;
+        display: grid;
+        gap: 22px;
+        padding: 24px 20px 32px;
+        background: rgba(var(--bg-rgb), 0.98);
+        border-bottom: 1px solid var(--line);
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .menu-open .nav-wrap {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .nav a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .nav-cta {
+        width: 100%;
+      }
+
+      .nav-cta .btn {
+        width: 100%;
+      }
+
+      .staff-list,
+      .reservation-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      :root {
+        --section-space: 72px;
+      }
+
+      body {
+        padding-bottom: var(--sticky-h);
+      }
+
+      .sticky-cta {
+        display: block;
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--mw));
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand-logo {
+        font-size: 1.2rem;
+      }
+
+      .hero-content {
+        padding-top: 108px;
+      }
+
+      .hero-logo {
+        font-size: clamp(3rem, 18vw, 4.8rem);
+      }
+
+      .concept-item,
+      .menu-panel,
+      .access-card,
+      .reservation-card {
+        padding: 24px 18px;
+      }
+
+      .menu-item {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-price {
+        text-align: left;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .access-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .cta-actions {
+        width: 100%;
+      }
+
+      .cta-actions .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+      }
+
+      .fade-in,
+      .fade-in.visible {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
-
-  <!-- JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HairSalon",
-    "name": "BLOOM",
-    "image": "https://placehold.co/1200x630/8a7d6b/ffffff?text=BLOOM",
-    "url": "https://example.com/",
-    "telephone": "03-1234-5678",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "神宮前5-10-1",
-      "addressLocality": "渋谷区",
-      "addressRegion": "東京都",
-      "postalCode": "150-0001",
-      "addressCountry": "JP"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 35.6654,
-      "longitude": 139.7100
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "10:00",
-        "closes": "20:00"
-      }
-    ],
-    "hasMap": "https://maps.google.com/?q=BLOOM+表参道"
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Selqune",
+      "image": "https://placehold.co/1600x2000",
+      "url": "https://example.com/bloom",
+      "telephone": "03-0000-8888",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "南青山1-99-99",
+        "addressLocality": "港区",
+        "addressRegion": "東京都",
+        "postalCode": "150-0001",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "35.6655",
+        "longitude": "139.7093"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "0",
+        "reviewCount": "0"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E5%AE%AE%E5%89%8D5-12-3"
+    }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へ移動</a>
 
-  <!-- スキップナビ -->
-  <a href="#main" class="skip-nav">メインコンテンツへ</a>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <p class="brand-logo" lang="en">Selqune</p>
+        <p class="brand-meta">青山エリアの路面店 / 髪質改善・トータルビューティー</p>
+      </div>
 
-  <!-- ヘッダー -->
-  <header class="header" role="banner">
-    <div class="container">
-      <a href="/" class="header-logo" lang="en">BLOOM</a>
-      <nav role="navigation" aria-label="メインナビゲーション">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#concept" lang="en">Concept</a></li>
-          <li><a href="#menu" lang="en">Menu</a></li>
-          <li><a href="#gallery" lang="en">Gallery</a></li>
-          <li><a href="#access" lang="en">Access</a></li>
-        </ul>
-      </nav>
-      <span class="btn-nav-wrap">
-        <a href="#reservation" class="btn btn-nav" lang="en">Reserve</a>
-      </span>
-      <button class="nav-toggle" aria-expanded="false" aria-label="メニューを開く" id="navToggle">
-        <span></span><span></span><span></span>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く" data-menu-toggle>
+        <span class="menu-toggle-line" aria-hidden="true"></span>
       </button>
+
+      <div class="nav-wrap" id="site-nav" data-menu-panel>
+        <nav class="nav" aria-label="主要メニュー">
+          <a href="#concept">Concept</a>
+          <a href="#features">Features</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#staff">Staff</a>
+          <a href="#access">Access</a>
+          <a href="#reservation">Reservation</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn-primary" href="#reservation">ご予約</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- ヒーロー -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-logo" lang="en">BLOOM</h1>
-      <p class="hero-sub">あなたらしさが、花ひらく場所</p>
-      <a href="#reservation" class="btn btn-hero" lang="en">Reserve</a>
-    </div>
-    <div class="hero-scroll" aria-hidden="true">
-      <span lang="en">Scroll</span>
-    </div>
-  </section>
-
-  <!-- メインコンテンツ -->
   <main id="main">
+    <section class="hero" aria-label="Selquneのメインビジュアル">
+      <div class="hero-media">
+        <img src="https://placehold.co/1600x2000" alt="Selquneのメインビジュアル" width="1600" height="2000">
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-stack">
+          <p class="hero-kicker" lang="en">Omotesando Hair Salon</p>
+          <h1 class="hero-logo" lang="en">Selqune</h1>
+          <p class="hero-sub">髪にふれる時間が、今日の気分まで整えていく。<br>表参道の静かな一角で、髪質改善とトータルビューティーを丁寧に重ねる美容室です。</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#reservation">ご予約はこちら</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span lang="en">Scroll</span>
+      </div>
+    </section>
 
-    <!-- マーキー -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-inner">
-        <span>Where your beauty blooms — Hair salon BLOOM Omotesando — Where your beauty blooms — Hair salon BLOOM Omotesando — </span>
-        <span>Where your beauty blooms — Hair salon BLOOM Omotesando — Where your beauty blooms — Hair salon BLOOM Omotesando — </span>
+        <span>Quiet polish for your hair and mood.</span>
+        <span>Quiet polish for your hair and mood.</span>
       </div>
     </div>
 
-    <!-- 01 Concept（パターンA：3段構造） -->
-    <section id="concept" class="section fade-in">
+    <section id="concept" class="section">
       <div class="container">
-        <span class="section-number">01</span>
-        <h2 class="section-title" lang="en">Concept</h2>
-        <p class="section-subtitle">コンセプト</p>
+        <div class="section-head fade-in">
+          <span class="section-number">01</span>
+          <h2 class="section-title" lang="en">Concept</h2>
+          <p class="section-subtitle">コンセプト</p>
+        </div>
 
-        <div class="concept-block">
-          <div class="concept-item">
-            <div class="concept-text">
-              <span class="concept-label" lang="en">Philosophy</span>
-              <h3>一人ひとりの「らしさ」を<br>引き出すために</h3>
-              <p>私たちは、お客様の髪質やライフスタイルに寄り添い、その方だけの美しさを見つけ出すことを大切にしています。流行を追うのではなく、あなたらしい美しさを一緒に探していきます。</p>
+        <div class="concept-grid">
+          <article class="concept-item fade-in">
+            <div>
+              <span class="concept-label" lang="en">Consultation</span>
+              <h3>髪質と骨格、その日の気分まで受けとめるカウンセリング</h3>
+              <p>初めてお越しいただく方にも、今感じている悩みや理想のイメージを落ち着いてお話しいただけるように。Selquneでは一人ひとりの髪質、骨格、日々の過ごし方を丁寧に伺いながら、扱いやすく続けやすいデザインをご提案いたします。</p>
             </div>
             <div class="concept-image">
-              <img src="https://placehold.co/600x800/EFECE7/44403B?text=Philosophy" alt="BLOOMの施術風景" width="600" height="800" loading="lazy">
+              <img src="https://placehold.co/600x800" alt="丁寧なカウンセリングのイメージ" width="600" height="800" loading="lazy">
             </div>
-          </div>
+          </article>
 
-          <div class="concept-item">
-            <div class="concept-text">
-              <span class="concept-label" lang="en">Quality</span>
-              <h3>髪に優しい、<br>こだわりの薬剤選び</h3>
-              <p>オーガニックカラーや低ダメージの薬剤を厳選。髪本来の美しさを損なわない施術で、サロン帰りだけでなく、翌日からも続く美しさをお届けします。</p>
+          <article class="concept-item fade-in">
+            <div>
+              <span class="concept-label" lang="en">Repair</span>
+              <h3>髪質改善を軸に、きれいが長く続くコンディションづくり</h3>
+              <p>カラーやパーマを楽しみながらも、手ざわりや艶を大切にしたい方へ。髪質改善トリートメントとホームケアのご提案を通して、サロンを出たあとも心地よさが続く髪づくりをお手伝いします。</p>
             </div>
             <div class="concept-image">
-              <img src="https://placehold.co/600x800/EFECE7/44403B?text=Quality" alt="オーガニックカラー剤" width="600" height="800" loading="lazy">
+              <img src="https://placehold.co/600x800" alt="髪質改善トリートメントのイメージ" width="600" height="800" loading="lazy">
             </div>
-          </div>
+          </article>
 
-          <div class="concept-item">
-            <div class="concept-text">
-              <span class="concept-label" lang="en">Space</span>
-              <h3>静かな時間が流れる、<br>あなただけの空間</h3>
-              <p>表参道の喧騒から少し離れた、落ち着いたプライベート空間。席数を限定し、お一人おひとりとの時間を大切にしています。</p>
+          <article class="concept-item fade-in">
+            <div>
+              <span class="concept-label" lang="en">Balance</span>
+              <h3>ヘアだけで終わらない、全体の印象まで整うトータルビューティー</h3>
+              <p>髪型だけでなく、表情や装いにまでなじむバランスを見つめること。洗練されたモード感の中にもやわらかさを残し、毎日に自然と溶け込む美しさを一緒に育てていきます。</p>
             </div>
             <div class="concept-image">
-              <img src="https://placehold.co/600x800/EFECE7/44403B?text=Space" alt="BLOOMの店内空間" width="600" height="800" loading="lazy">
+              <img src="https://placehold.co/600x800" alt="トータルビューティーのイメージ" width="600" height="800" loading="lazy">
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <hr class="section-divider">
 
-    <!-- 02 Features -->
-    <section id="features" class="section fade-in">
+    <section id="features" class="section">
       <div class="container">
-        <span class="section-number">02</span>
-        <h2 class="section-title" lang="en">Features</h2>
-        <p class="section-subtitle">こだわり</p>
+        <div class="section-head fade-in">
+          <span class="section-number">02</span>
+          <h2 class="section-title" lang="en">Features</h2>
+          <p class="section-subtitle">こだわり</p>
+        </div>
 
         <div class="features-list">
-          <div class="feature-item">
+          <article class="feature-item fade-in">
             <div class="feature-image">
-              <img src="https://placehold.co/600x800/EFECE7/44403B?text=Feature+01" alt="髪質改善トリートメントの施術" width="600" height="800" loading="lazy">
+              <img src="https://placehold.co/900x675" alt="洗練されたスタイル提案のイメージ" width="900" height="675" loading="lazy">
             </div>
             <div class="feature-text">
               <span class="feature-number" lang="en">01</span>
-              <h3>髪質改善トリートメント</h3>
-              <p>酸熱トリートメントをベースに、お客様の髪質に合わせてカスタマイズ。繰り返すほどに髪が扱いやすくなる、本質的なケアをご提案します。</p>
+              <h3>小さな違和感も言葉にしやすい、静かな距離感</h3>
+              <p>慌ただしく進めるのではなく、髪の履歴や毎朝のスタイリング時間まで確認しながら施術を組み立てます。初めての方にも安心してお任せいただけるよう、変化の理由をひとつずつ共有いたします。</p>
+              <span class="feature-note">青山エリアの路面店の通いやすさ</span>
             </div>
-          </div>
+          </article>
 
-          <div class="feature-item">
+          <article class="feature-item fade-in">
             <div class="feature-image">
-              <img src="https://placehold.co/600x800/EFECE7/44403B?text=Feature+02" alt="オーガニックカラーの薬剤" width="600" height="800" loading="lazy">
+              <img src="https://placehold.co/900x675" alt="髪質改善に寄り添う施術のイメージ" width="900" height="675" loading="lazy">
             </div>
             <div class="feature-text">
               <span class="feature-number" lang="en">02</span>
-              <h3>オーガニックカラー</h3>
-              <p>天然由来成分90%以上のカラー剤を使用。頭皮への負担を最小限に抑えながら、透明感のある美しい発色を実現します。</p>
+              <h3>施術直後だけでなく、次回来店まで見据えた髪質改善</h3>
+              <p>乾燥や広がり、繰り返すカラーでゆらぎやすい髪にも、今の状態に合わせたケアをご案内。日常の扱いやすさと、鏡を見るたびに感じる艶感の両方を大切にしています。</p>
+              <span class="feature-note">髪質改善トリートメント 90分メニューあり</span>
             </div>
-          </div>
+          </article>
 
-          <div class="feature-item">
+          <article class="feature-item fade-in">
             <div class="feature-image">
-              <img src="https://placehold.co/600x800/EFECE7/44403B?text=Feature+03" alt="プライベート空間のセット面" width="600" height="800" loading="lazy">
+              <img src="https://placehold.co/900x675" alt="落ち着いたサロン空間のイメージ" width="900" height="675" loading="lazy">
             </div>
             <div class="feature-text">
               <span class="feature-number" lang="en">03</span>
-              <h3>完全予約・少人数制</h3>
-              <p>セット面3席の小さなサロン。お客様が重なることなく、あなただけの時間をお過ごしいただけます。</p>
+              <h3>モードな空気感の中に、やわらかな余白を残す空間設計</h3>
+              <p>気持ちまでほどけるような落ち着いた店内で、ヘッドスパやトータルビューティーの時間をゆっくりと。忙しい日々の途中に、整えるための余白をお届けします。</p>
+              <span class="feature-note">ヘッドスパ 30分メニューあり</span>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>Refined color, gentle texture, effortless finish.</span>
+        <span>Refined color, gentle texture, effortless finish.</span>
+      </div>
+    </div>
+
+    <section id="menu" class="section">
+      <div class="container">
+        <div class="section-head fade-in">
+          <span class="section-number">03</span>
+          <h2 class="section-title" lang="en">Menu</h2>
+          <p class="section-subtitle">メニュー</p>
+        </div>
+
+        <div class="menu-layout fade-in">
+          <div class="menu-panel">
+            <div class="menu-panel-head">
+              <div>
+                <h3 lang="en">Standard Menu</h3>
+                <p>初回価格のあるメニューは通常価格とあわせてご案内しています。</p>
+              </div>
+              <p>営業時間 10:00 - 20:00 / 毎週火曜日定休</p>
+            </div>
+
+            <dl class="menu-list">
+              <div class="menu-item">
+                <dt>
+                  <span class="menu-item-name">カット</span>
+                  <span class="menu-meta">約60分 / 骨格と髪質に合わせたデザインカット</span>
+                </dt>
+                <dd class="menu-price">初回 ¥4,400 <span class="tax">（税込）</span><br>通常 ¥5,500 <span class="tax">（税込）</span></dd>
+              </div>
+              <div class="menu-item">
+                <dt>
+                  <span class="menu-item-name">カット + カラー</span>
+                  <span class="menu-meta">約150分 / 透明感と艶感を引き出すベーシックコース</span>
+                </dt>
+                <dd class="menu-price">初回 ¥9,900 <span class="tax">（税込）</span><br>通常 ¥12,100 <span class="tax">（税込）</span></dd>
+              </div>
+              <div class="menu-item">
+                <dt>
+                  <span class="menu-item-name">カット + パーマ</span>
+                  <span class="menu-meta">約180分 / やわらかな動きをつくるパーマデザイン</span>
+                </dt>
+                <dd class="menu-price">初回 ¥11,000 <span class="tax">（税込）</span><br>通常 ¥13,200 <span class="tax">（税込）</span></dd>
+              </div>
+              <div class="menu-item">
+                <dt>
+                  <span class="menu-item-name">髪質改善トリートメント</span>
+                  <span class="menu-meta">約90分 / 乾燥や広がりを整える集中ケア</span>
+                </dt>
+                <dd class="menu-price">¥8,800 <span class="tax">（税込）</span></dd>
+              </div>
+              <div class="menu-item">
+                <dt>
+                  <span class="menu-item-name">ヘッドスパ</span>
+                  <span class="menu-meta">約30分 / すき間時間にも取り入れやすいリセットケア</span>
+                </dt>
+                <dd class="menu-price">¥3,300 <span class="tax">（税込）</span></dd>
+              </div>
+            </dl>
+
+            <p class="menu-caption">ご予約時にご希望のメニューが決まっていない場合も、当日のカウンセリングでご相談いただけます。</p>
+          </div>
+
+          <div class="menu-cta-box">
+            <p class="menu-cta-copy">施術時間や組み合わせのご相談も、Hot Pepper・LINE・お電話から承ります。</p>
+            <a class="btn btn-primary" href="#reservation">メニューを見て予約する</a>
           </div>
         </div>
       </div>
@@ -964,221 +1400,154 @@
 
     <hr class="section-divider">
 
-    <!-- 03 Menu（定義リスト型） -->
-    <section id="menu" class="section fade-in">
+    <section id="gallery" class="section">
       <div class="container">
-        <span class="section-number">03</span>
-        <h2 class="section-title" lang="en">Menu</h2>
-        <p class="section-subtitle">メニュー</p>
-
-        <div class="menu-categories">
-          <div class="menu-category">
-            <h3 lang="en">Cut</h3>
-            <dl class="menu-list">
-              <div class="menu-item">
-                <dt>カット</dt>
-                <dd>¥7,700 <span class="tax">（税込）</span></dd>
-              </div>
-              <div class="menu-item">
-                <dt>前髪カット</dt>
-                <dd>¥1,100 <span class="tax">（税込）</span></dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="menu-category">
-            <h3 lang="en">Color</h3>
-            <dl class="menu-list">
-              <div class="menu-item">
-                <dt>オーガニックカラー</dt>
-                <dd>¥9,900 <span class="tax">（税込）</span></dd>
-              </div>
-              <div class="menu-item">
-                <dt>ハイライト</dt>
-                <dd>¥5,500〜 <span class="tax">（税込）</span></dd>
-              </div>
-              <div class="menu-item">
-                <dt>リタッチカラー</dt>
-                <dd>¥7,700 <span class="tax">（税込）</span></dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="menu-category">
-            <h3 lang="en">Treatment</h3>
-            <dl class="menu-list">
-              <div class="menu-item">
-                <dt>髪質改善トリートメント</dt>
-                <dd>¥11,000 <span class="tax">（税込）</span></dd>
-              </div>
-              <div class="menu-item">
-                <dt>トリートメント</dt>
-                <dd>¥3,300〜 <span class="tax">（税込）</span></dd>
-              </div>
-              <div class="menu-item">
-                <dt>ヘッドスパ</dt>
-                <dd>¥4,400 <span class="tax">（税込）</span></dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="menu-category">
-            <h3 lang="en">Set Menu</h3>
-            <dl class="menu-list">
-              <div class="menu-item">
-                <dt>カット＋オーガニックカラー</dt>
-                <dd>¥16,500 <span class="tax">（税込）</span></dd>
-              </div>
-              <div class="menu-item">
-                <dt>カット＋髪質改善トリートメント</dt>
-                <dd>¥17,600 <span class="tax">（税込）</span></dd>
-              </div>
-            </dl>
-          </div>
+        <div class="section-head fade-in">
+          <span class="section-number">04</span>
+          <h2 class="section-title" lang="en">Gallery</h2>
+          <p class="section-subtitle">スタイル</p>
         </div>
 
-        <p class="menu-note">※ 料金は税込表記です。髪の長さや状態により変動する場合がございます。</p>
-
-        <div class="menu-cta">
-          <a href="#reservation" class="btn btn-primary">ご予約はこちら</a>
+        <div class="gallery-scroll fade-in">
+          <article class="gallery-card">
+            <img src="https://placehold.co/260x347" alt="柔らかなロングレイヤーのスタイル写真" width="260" height="347" loading="lazy">
+            <p class="gallery-caption" lang="en">Soft Layer</p>
+          </article>
+          <article class="gallery-card">
+            <img src="https://placehold.co/260x347" alt="艶感のあるボブスタイル写真" width="260" height="347" loading="lazy">
+            <p class="gallery-caption" lang="en">Polished Bob</p>
+          </article>
+          <article class="gallery-card">
+            <img src="https://placehold.co/260x347" alt="透明感カラーのミディアムスタイル写真" width="260" height="347" loading="lazy">
+            <p class="gallery-caption" lang="en">Sheer Beige</p>
+          </article>
+          <article class="gallery-card">
+            <img src="https://placehold.co/260x347" alt="やわらかなパーマスタイル写真" width="260" height="347" loading="lazy">
+            <p class="gallery-caption" lang="en">Airy Perm</p>
+          </article>
+          <article class="gallery-card">
+            <img src="https://placehold.co/260x347" alt="品のあるショートスタイル写真" width="260" height="347" loading="lazy">
+            <p class="gallery-caption" lang="en">Clean Short</p>
+          </article>
         </div>
       </div>
     </section>
 
     <hr class="section-divider">
 
-    <!-- 04 Style Gallery（横スクロール） -->
-    <section id="gallery" class="section fade-in">
+    <section id="staff" class="section">
       <div class="container">
-        <span class="section-number">04</span>
-        <h2 class="section-title" lang="en">Gallery</h2>
-        <p class="section-subtitle">スタイル</p>
-      </div>
-
-      <div class="gallery-scroll">
-        <div class="gallery-card">
-          <img src="https://placehold.co/260x347/EFECE7/44403B?text=Style+01" alt="透明感ベージュのミディアムヘア" width="260" height="347" loading="lazy">
-          <p class="gallery-caption" lang="en">Beige Medium</p>
+        <div class="section-head fade-in">
+          <span class="section-number">05</span>
+          <h2 class="section-title" lang="en">Staff</h2>
+          <p class="section-subtitle">スタッフ</p>
         </div>
-        <div class="gallery-card">
-          <img src="https://placehold.co/260x347/EFECE7/44403B?text=Style+02" alt="ナチュラルなショートボブ" width="260" height="347" loading="lazy">
-          <p class="gallery-caption" lang="en">Natural Bob</p>
-        </div>
-        <div class="gallery-card">
-          <img src="https://placehold.co/260x347/EFECE7/44403B?text=Style+03" alt="柔らかいウ��ーブロング" width="260" height="347" loading="lazy">
-          <p class="gallery-caption" lang="en">Soft Wave Long</p>
-        </div>
-        <div class="gallery-card">
-          <img src="https://placehold.co/260x347/EFECE7/44403B?text=Style+04" alt="グレージュカラーのレイヤー" width="260" height="347" loading="lazy">
-          <p class="gallery-caption" lang="en">Greige Layer</p>
-        </div>
-        <div class="gallery-card">
-          <img src="https://placehold.co/260x347/EFECE7/44403B?text=Style+05" alt="ハイライトのミディアムヘア" width="260" height="347" loading="lazy">
-          <p class="gallery-caption" lang="en">Highlight Medium</p>
-        </div>
-        <div class="gallery-card">
-          <img src="https://placehold.co/260x347/EFECE7/44403B?text=Style+06" alt="オーガニックカラーのロングヘア" width="260" height="347" loading="lazy">
-          <p class="gallery-caption" lang="en">Organic Color Long</p>
-        </div>
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- 05 Staff -->
-    <section id="staff" class="section fade-in">
-      <div class="container">
-        <span class="section-number">05</span>
-        <h2 class="section-title" lang="en">Staff</h2>
-        <p class="section-subtitle">スタッフ</p>
 
         <div class="staff-list">
-          <div class="staff-card">
-            <img src="https://placehold.co/400x500/EFECE7/44403B?text=Staff+01" alt="田中美咲" width="400" height="500" loading="lazy">
-            <h3>田中 美咲</h3>
+          <article class="staff-card fade-in">
+            <img src="https://placehold.co/400x500" alt="田中美咲のスタッフ写真" width="400" height="500" loading="lazy">
+            <h3>志水 澪</h3>
             <p class="staff-role" lang="en">Owner Stylist</p>
-            <p class="staff-message">一人ひとりの髪と向き合い、日常がもっと心地よくなるヘアスタイルをご提案します。お��軽にご相談ください。</p>
-          </div>
-          <div class="staff-card">
-            <img src="https://placehold.co/400x500/EFECE7/44403B?text=Staff+02" alt="佐藤由衣" width="400" height="500" loading="lazy">
-            <h3>佐藤 由衣</h3>
+            <p class="staff-message">お客様一人ひとりの髪質と骨格に寄り添ったスタイル提案を大切にしています。</p>
+          </article>
+
+          <article class="staff-card fade-in">
+            <img src="https://placehold.co/400x500" alt="佐藤葵のスタッフ写真" width="400" height="500" loading="lazy">
+            <h3>蓮見 柚葉</h3>
             <p class="staff-role" lang="en">Stylist</p>
-            <p class="staff-message">カラーが得意です。透明感のある色味で、あなたの魅力を引き出します。</p>
-          </div>
+            <p class="staff-message">髪のお悩みを丁寧にお伺いし、扱いやすく長持ちするスタイルをお作りします。</p>
+          </article>
         </div>
       </div>
     </section>
 
     <hr class="section-divider">
 
-    <!-- 06 Photo Gallery -->
-    <section id="photos" class="section fade-in">
+    <section id="photos" class="section">
       <div class="container">
-        <span class="section-number">06</span>
-        <h2 class="section-title" lang="en">Photo</h2>
-        <p class="section-subtitle">サロン</p>
+        <div class="section-head fade-in">
+          <span class="section-number">06</span>
+          <h2 class="section-title" lang="en">Photo</h2>
+          <p class="section-subtitle">サロン</p>
+        </div>
 
-        <div class="photo-grid">
-          <div class="photo-item">
-            <img src="https://placehold.co/400x300/EFECE7/44403B?text=Interior+01" alt="BLOOMの受付" width="400" height="300" loading="lazy">
+        <div class="photo-grid fade-in">
+          <article class="photo-item">
+            <img src="https://placehold.co/400x300" alt="受付カウンターのイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Reception</span>
-          </div>
-          <div class="photo-item">
-            <img src="https://placehold.co/400x300/EFECE7/44403B?text=Interior+02" alt="BLOOMのセット面" width="400" height="300" loading="lazy">
+          </article>
+          <article class="photo-item">
+            <img src="https://placehold.co/400x300" alt="セット面のイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Styling Area</span>
-          </div>
-          <div class="photo-item">
-            <img src="https://placehold.co/400x300/EFECE7/44403B?text=Interior+03" alt="BLOOMのシャンプーブース" width="400" height="300" loading="lazy">
-            <span class="photo-caption" lang="en">Shampoo Booth</span>
-          </div>
-          <div class="photo-item">
-            <img src="https://placehold.co/400x300/EFECE7/44403B?text=Interior+04" alt="BLOOMの待合スペース" width="400" height="300" loading="lazy">
-            <span class="photo-caption" lang="en">Waiting Area</span>
-          </div>
-          <div class="photo-item">
-            <img src="https://placehold.co/400x300/EFECE7/44403B?text=Interior+05" alt="自然光が入る窓際" width="400" height="300" loading="lazy">
-            <span class="photo-caption" lang="en">Natural Light</span>
-          </div>
-          <div class="photo-item">
-            <img src="https://placehold.co/400x300/EFECE7/44403B?text=Interior+06" alt="BLOOMで使用するカラー剤" width="400" height="300" loading="lazy">
-            <span class="photo-caption" lang="en">Products</span>
-          </div>
+          </article>
+          <article class="photo-item">
+            <img src="https://placehold.co/400x300" alt="シャンプーブースのイメージ写真" width="400" height="300" loading="lazy">
+            <span class="photo-caption" lang="en">Spa Room</span>
+          </article>
+          <article class="photo-item">
+            <img src="https://placehold.co/400x300" alt="待合スペースのイメージ写真" width="400" height="300" loading="lazy">
+            <span class="photo-caption" lang="en">Lounge</span>
+          </article>
+          <article class="photo-item">
+            <img src="https://placehold.co/400x300" alt="施術風景のイメージ写真" width="400" height="300" loading="lazy">
+            <span class="photo-caption" lang="en">Session</span>
+          </article>
+          <article class="photo-item">
+            <img src="https://placehold.co/400x300" alt="店内ディテールのイメージ写真" width="400" height="300" loading="lazy">
+            <span class="photo-caption" lang="en">Details</span>
+          </article>
         </div>
       </div>
     </section>
 
     <hr class="section-divider">
 
-    <!-- 07 Access -->
-    <section id="access" class="section fade-in">
+    <section id="access" class="section">
       <div class="container">
-        <span class="section-number">07</span>
-        <h2 class="section-title" lang="en">Access</h2>
-        <p class="section-subtitle">アクセス</p>
+        <div class="section-head fade-in">
+          <span class="section-number">07</span>
+          <h2 class="section-title" lang="en">Access</h2>
+          <p class="section-subtitle">アクセス</p>
+        </div>
 
-        <div class="access-content">
-          <div class="access-info">
-            <dl>
-              <dt>住所</dt>
-              <dd>東京都渋谷区神宮前5-10-1<br>表参道ビル 3F</dd>
-              <dt>最寄り駅</dt>
-              <dd>表参道駅 A1出口 徒歩2分</dd>
-              <dt>営業時間</dt>
-              <dd>10:00〜20:00（最終受付 19:00）</dd>
-              <dt>定休日</dt>
-              <dd>毎週火曜日</dd>
-              <dt>電話番号</dt>
-              <dd><a href="tel:03-1234-5678">03-1234-5678</a></dd>
-              <dt>お支払い</dt>
-              <dd>現金 / クレジットカード / PayPay</dd>
+        <div class="access-layout">
+          <div class="access-card fade-in">
+            <p class="eyebrow" lang="en">Salon Information</p>
+            <dl class="access-list">
+              <div class="access-row">
+                <dt>住所</dt>
+                <dd>東京都港区南青山1-99-99</dd>
+              </div>
+              <div class="access-row">
+                <dt>アクセス</dt>
+                <dd>青山エリアの路面店</dd>
+              </div>
+              <div class="access-row">
+                <dt>営業時間</dt>
+                <dd>10:00 - 20:00</dd>
+              </div>
+              <div class="access-row">
+                <dt>定休日</dt>
+                <dd>毎週火曜日</dd>
+              </div>
+              <div class="access-row">
+                <dt>電話番号</dt>
+                <dd><a href="tel:03-0000-8888">03-0000-8888</a></dd>
+              </div>
+              <div class="access-row">
+                <dt>お支払い</dt>
+                <dd>現金 / クレジットカード / PayPay / 交通系IC</dd>
+              </div>
             </dl>
           </div>
-          <div class="access-map">
+
+          <div class="access-map fade-in">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7!2d139.71!3d35.665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sja!2sjp!4v1"
-              width="100%" height="400" style="border:0;" allowfullscreen=""
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="BLOOMの地図"
+              src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E5%AE%AE%E5%89%8D5-12-3&z=16&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Selquneの地図"
+              allowfullscreen
             ></iframe>
           </div>
         </div>
@@ -1187,112 +1556,202 @@
 
     <hr class="section-divider">
 
-    <!-- 08 Reservation（パターンA：外部リンク型） -->
-    <section id="reservation" class="section fade-in">
-      <div class="container" style="text-align: center;">
-        <span class="section-number">08</span>
-        <h2 class="section-title" lang="en">Reservation</h2>
-        <p class="section-subtitle">ご予約</p>
-
-        <div class="cta-buttons">
-          <a href="https://beauty.hotpepper.jp/" class="btn btn-primary" target="_blank" rel="noopener">Hot Pepper Beauty で予約</a>
-          <a href="https://line.me/" class="btn btn-outline" target="_blank" rel="noopener">LINE で予約</a>
-          <a href="tel:03-1234-5678" class="btn btn-outline">お電話で予約</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- マーキー -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-inner">
-        <span>Where your beauty blooms — Hair salon BLOOM Omotesando — Where your beauty blooms — Hair salon BLOOM Omotesando — </span>
-        <span>Where your beauty blooms — Hair salon BLOOM Omotesando — Where your beauty blooms — Hair salon BLOOM Omotesando — </span>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <section class="section cta-section">
+    <section id="reservation" class="section">
       <div class="container">
-        <p class="cta-catch" lang="en">Book Your Visit</p>
-        <p class="cta-sub">あなたらしい美しさを、一緒に見つけませんか</p>
-        <div class="cta-buttons">
-          <a href="https://beauty.hotpepper.jp/" class="btn btn-cta" target="_blank" rel="noopener">ご予約はこちら</a>
-          <a href="tel:03-1234-5678" class="btn btn-cta-outline">お電話で予約</a>
+        <div class="section-head fade-in">
+          <span class="section-number">08</span>
+          <h2 class="section-title" lang="en">Reservation</h2>
+          <p class="section-subtitle">ご予約</p>
+        </div>
+
+        <div class="reservation-card fade-in">
+          <p class="reservation-copy">ご予約方法は Hot Pepper・LINE・お電話からお選びいただけます。メニューが未定の場合も、カウンセリング前提でお気軽にご相談ください。</p>
+          <div class="reservation-links">
+            <a class="btn btn-primary" href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener">Hot Pepper で予約</a>
+            <a class="btn btn-secondary" href="https://line.me/" target="_blank" rel="noopener">LINE で予約</a>
+            <a class="btn btn-secondary" href="tel:03-0000-8888">お電話で予約</a>
+          </div>
         </div>
       </div>
     </section>
 
+    <section class="section cta-section">
+      <div class="container cta-inner fade-in">
+        <p class="cta-catch" lang="en">Reserve Your Quiet Moment</p>
+        <p class="cta-sub">髪を整えることが、気持ちを整える時間にもなるように。表参道でのひとときを、Selquneでお待ちしております。</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="#reservation">ご予約はこちら</a>
+          <a class="btn btn-ghost" href="tel:03-0000-8888">03-0000-8888</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- フッター -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <p class="footer-logo" lang="en">BLOOM</p>
-      <div class="footer-sns">
-        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://line.me/" target="_blank" rel="noopener" aria-label="LINE">LINE</a>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo" lang="en">Selqune</p>
+      <p class="footer-meta">東京都港区南青山1-99-99 / 青山エリアの路面店 / 10:00 - 20:00 / 毎週火曜日</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagramを開く">Instagram</a>
+        <a href="https://line.me/" target="_blank" rel="noopener" aria-label="LINEを開く">LINE</a>
+        <a href="tel:03-0000-8888" aria-label="お電話で予約 03-0000-8888">03-0000-8888</a>
       </div>
-      <p class="footer-copy">&copy; 2026 BLOOM. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Selqune. All rights reserved.</p>
     </div>
-  </footer>
+    <p class="demo-notice" style="text-align:center; font-size:0.75rem; color:var(--text-light); padding:16px 0;">
+  ※ SateOnの制作イメージです。実在する店舗・企業ではありません。
+</p>
+</footer>
 
-  <!-- モバイルスティッキーCTA -->
-  <div class="sticky-cta" role="complementary" aria-label="予約ボタン">
-    <a href="#reservation">ご予約はこちら</a>
+  <div class="sticky-cta">
+    <a class="btn btn-primary" href="#reservation">Hot Pepper・LINE・電話で予約</a>
   </div>
 
-  <!-- noscript対応 -->
   <noscript>
     <style>
-      .fade-in { opacity: 1 !important; transform: none !important; }
-      .marquee-inner { animation: none !important; }
-      .nav-links { display: flex !important; }
-      .header { background-color: rgba(var(--bg-rgb), 0.95) !important; border-bottom: 1px solid var(--line) !important; }
-      .header .header-logo { color: var(--text) !important; }
-      .header .nav-links a { color: var(--text-mid) !important; }
+      .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .header {
+        background: rgba(var(--bg-rgb), 0.94) !important;
+        border-bottom-color: var(--line) !important;
+      }
+
+      .nav-wrap {
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        display: flex !important;
+        gap: 20px !important;
+        align-items: center !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border-bottom: none !important;
+      }
+
+      .marquee-inner {
+        animation: none !important;
+      }
+
+      .menu-toggle {
+        display: none !important;
+      }
     </style>
   </noscript>
 
   <script>
-    /* ヘッダースクロール変化 */
-    (function() {
-      var header = document.querySelector('.header');
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 80) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
-    })();
+    (() => {
+      const root = document.documentElement;
+      const body = document.body;
+      const header = document.getElementById("header");
+      const menuToggle = document.querySelector("[data-menu-toggle]");
+      const menuPanel = document.querySelector("[data-menu-panel]");
+      const navLinks = menuPanel ? menuPanel.querySelectorAll("a") : [];
+      const fadeTargets = document.querySelectorAll(".fade-in");
+      let lastFocused = null;
 
-    /* スクロールフェードイン */
-    (function() {
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+      const closeMenu = () => {
+        body.classList.remove("menu-open");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "メニューを開く");
+        }
+      };
+
+      const openMenu = () => {
+        body.classList.add("menu-open");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "true");
+          menuToggle.setAttribute("aria-label", "メニューを閉じる");
+        }
+      };
+
+      if (menuToggle && menuPanel) {
+        menuToggle.addEventListener("click", () => {
+          const willOpen = !body.classList.contains("menu-open");
+          if (willOpen) {
+            lastFocused = document.activeElement;
+            openMenu();
+            const firstLink = menuPanel.querySelector("a, button");
+            if (firstLink) firstLink.focus();
+          } else {
+            closeMenu();
+            menuToggle.focus();
           }
         });
-      }, { threshold: 0.06 });
 
-      document.querySelectorAll('.fade-in').forEach(function(el) {
-        observer.observe(el);
-      });
-    })();
+        menuPanel.addEventListener("keydown", (event) => {
+          if (!body.classList.contains("menu-open")) return;
 
-    /* モバイルナビ */
-    (function() {
-      var toggle = document.getElementById('navToggle');
-      var links = document.getElementById('navLinks');
-      toggle.addEventListener('click', function() {
-        var isOpen = links.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', isOpen);
-        toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
-      });
+          if (event.key === "Escape") {
+            closeMenu();
+            menuToggle.focus();
+            return;
+          }
+
+          if (event.key !== "Tab") return;
+
+          const focusables = menuPanel.querySelectorAll('a[href], button:not([disabled])');
+          if (!focusables.length) return;
+
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            closeMenu();
+            if (lastFocused instanceof HTMLElement) {
+              lastFocused.focus();
+            }
+          });
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 820) {
+            closeMenu();
+          }
+        });
+      }
+
+      const onScroll = () => {
+        if (!header) return;
+        if (window.scrollY > 24) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      };
+
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              currentObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.06 });
+
+        fadeTargets.forEach((element) => observer.observe(element));
+      } else {
+        fadeTargets.forEach((element) => element.classList.add("visible"));
+      }
     })();
   </script>
-
 </body>
 </html>
