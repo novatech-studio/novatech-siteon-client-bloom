@@ -256,10 +256,7 @@
       gap: 18px;
     }
 
-    .nav a {
-      font-size: 0.82rem;
-      color: var(--text-mid);
-    }
+    .nav a { font-size: 0.82rem; }
 
     .nav-cta {
       white-space: nowrap;
@@ -1132,6 +1129,17 @@
         transform: none;
       }
     }
+  
+    /* ヘッダーコントラスト改善 */
+    .nav a { color: rgba(255,255,255,0.9); transition: color 0.3s ease; }
+    .header.scrolled .nav a { color: var(--text-mid); }
+    .brand-logo { color: rgba(255,255,255,0.95); transition: color 0.3s ease; }
+    .brand-meta { color: rgba(255,255,255,0.7); transition: color 0.3s ease; }
+    .header.scrolled .brand-logo { color: var(--text); }
+    .header.scrolled .brand-meta { color: var(--text-light); }
+    .menu-toggle { border-color: rgba(255,255,255,0.5); color: rgba(255,255,255,0.9); transition: border-color 0.3s, color 0.3s, background 0.3s; }
+    .header.scrolled .menu-toggle { border-color: var(--line); color: var(--text); }
+
   </style>
   <script type="application/ld+json">
     {
@@ -1194,13 +1202,13 @@
 
       <div class="nav-wrap" id="site-nav" data-menu-panel>
         <nav class="nav" aria-label="主要メニュー">
-          <a href="#concept">Concept</a>
-          <a href="#features">Features</a>
-          <a href="#menu">Menu</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#staff">Staff</a>
-          <a href="#access">Access</a>
-          <a href="#reservation">Reservation</a>
+          <a href="#concept">コンセプト</a>
+          <a href="#features">特徴</a>
+          <a href="#menu">メニュー</a>
+          <a href="#gallery">ギャラリー</a>
+          <a href="#staff">スタッフ</a>
+          <a href="#access">アクセス</a>
+          <a href="#reservation">ご予約</a>
         </nav>
         <div class="nav-cta">
           <a class="btn btn-primary" href="#reservation">ご予約</a>
@@ -1453,14 +1461,14 @@
 
         <div class="staff-list">
           <article class="staff-card fade-in">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=500&fit=crop" alt="志水 澪のスタッフ写真" width="400" height="500" loading="lazy">
+            <img src="images/staff-shimizu.jpg" alt="志水 澪・オーナースタイリスト" width="400" height="500" loading="lazy">
             <h3>志水 澪</h3>
             <p class="staff-role" lang="en">Owner Stylist</p>
             <p class="staff-message">お客様一人ひとりの髪質と骨格に寄り添ったスタイル提案を大切にしています。</p>
           </article>
 
           <article class="staff-card fade-in">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="蓮見 柚葉のスタッフ写真" width="400" height="500" loading="lazy">
+            <img src="images/staff-hasumi.jpg" alt="蓮見 柚葉・スタイリスト" width="400" height="500" loading="lazy">
             <h3>蓮見 柚葉</h3>
             <p class="staff-role" lang="en">Stylist</p>
             <p class="staff-message">髪のお悩みを丁寧にお伺いし、扱いやすく長持ちするスタイルをお作りします。</p>
