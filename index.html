@@ -981,9 +981,13 @@
         --section-space: 80px;
       }
 
-      .access-layout,
-      .feature-item {
+      .access-layout {
         grid-template-columns: 1fr;
+      }
+
+      .feature-item {
+        grid-template-columns: minmax(0, 1fr);
+        min-width: 0;
       }
 
       .concept-item {
