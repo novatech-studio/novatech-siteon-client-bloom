@@ -982,9 +982,13 @@
       }
 
       .access-layout,
-      .feature-item,
-      .concept-item {
+      .feature-item {
         grid-template-columns: 1fr;
+      }
+
+      .concept-item {
+        grid-template-columns: minmax(0, 1fr);
+        min-width: 0;
       }
 
       .concept-item:nth-child(even) .concept-image,
