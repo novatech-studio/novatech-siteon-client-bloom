@@ -463,19 +463,20 @@
 
     .concept-grid {
       display: grid;
-      gap: 28px;
+      gap: 0;
     }
 
     .concept-item {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(240px, 0.95fr);
-      gap: 34px;
+      gap: 48px;
       align-items: center;
-      padding: 32px;
-      background: linear-gradient(180deg, rgba(239, 236, 231, 0.72) 0%, rgba(247, 245, 242, 0.96) 100%);
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow-soft);
+      padding: 48px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .concept-item:last-child {
+      border-bottom: none;
     }
 
     .concept-item:nth-child(even) .concept-image {
@@ -578,14 +579,16 @@
 
     .menu-layout {
       display: grid;
-      gap: 30px;
+      gap: 0;
     }
 
     .menu-panel {
-      padding: 32px;
-      background: var(--bg-alt);
-      border: 1px solid var(--line);
-      border-radius: var(--r);
+      padding: 40px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .menu-panel:last-child {
+      border-bottom: none;
     }
 
     .menu-panel-head {
@@ -730,10 +733,6 @@
     .staff-card {
       display: grid;
       gap: 18px;
-      padding: 18px;
-      background: var(--bg-alt);
-      border: 1px solid var(--line);
-      border-radius: var(--r);
     }
 
     .staff-card img {
@@ -806,16 +805,13 @@
     .access-layout {
       display: grid;
       grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      gap: 32px;
+      gap: 48px;
       align-items: start;
     }
 
     .access-card,
     .reservation-card {
-      padding: 32px;
-      background: var(--bg-alt);
-      border: 1px solid var(--line);
-      border-radius: var(--r);
+      padding: 40px 0;
     }
 
     .access-list {
