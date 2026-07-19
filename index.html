@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,300&family=Shippori+Mincho:wght@400&family=Noto+Sans+JP:wght@300;400&display=swap">
+  <link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,300&family=Shippori+Mincho:wght@400&family=Noto+Sans+JP:wght@300;400&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,300&family=Shippori+Mincho:wght@400&family=Noto+Sans+JP:wght@300;400&display=swap"></noscript>
   <style>
@@ -31,14 +32,14 @@
       --text-light: #6E6860;
       --accent: #7A6A58;
       --line: #D4CDC3;
-      --r: 3px;
+      --r: 8px;
       --mw: 1080px;
       --bg-rgb: 247, 245, 242;
       --font-display: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
       --font-heading: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
       --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
       --header-h: 76px;
-      --section-space: 120px;
+      --section-space: clamp(80px, 12vw, 140px);
       --sticky-h: 88px;
     }
 
@@ -144,10 +145,10 @@
     .section-title {
       margin: 0;
       font-family: var(--font-display);
-      font-size: clamp(2rem, 4.5vw, 2.8rem);
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
       font-weight: 400;
       line-height: 1.05;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
     }
 
     .section-subtitle {
@@ -320,6 +321,7 @@
     .hero {
       position: relative;
       min-height: 100vh;
+      min-height: 100svh;
       overflow: hidden;
       color: var(--bg);
       background: var(--bg-dark);
@@ -334,6 +336,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      animation: hero-zoom 12s ease-out forwards;
+    }
+
+    @keyframes hero-zoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.06); }
     }
 
     .hero-overlay {
@@ -348,6 +356,7 @@
       position: relative;
       z-index: 1;
       min-height: 100vh;
+      min-height: 100svh;
       display: grid;
       place-items: center;
       text-align: center;
@@ -358,6 +367,20 @@
       display: grid;
       gap: 18px;
       max-width: 720px;
+    }
+
+    .hero-stack > * {
+      opacity: 0;
+      animation: hero-in 0.6s ease-out both;
+    }
+    .hero-stack > *:nth-child(1) { animation-delay: 0s; }
+    .hero-stack > *:nth-child(2) { animation-delay: 0.2s; }
+    .hero-stack > *:nth-child(3) { animation-delay: 0.4s; }
+    .hero-stack > *:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes hero-in {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .hero-kicker {
@@ -503,6 +526,7 @@
     .concept-item p {
       margin: 0;
       color: var(--text-mid);
+      max-width: 38em;
     }
 
     .concept-image {
@@ -563,6 +587,7 @@
     .feature-text p {
       margin: 0;
       color: var(--text-mid);
+      max-width: 38em;
     }
 
     .feature-note {
@@ -969,8 +994,9 @@
 
     .fade-in {
       opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      transition-delay: var(--reveal-delay, 0s);
     }
 
     .fade-in.visible {
@@ -978,11 +1004,39 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 1024px) {
-      :root {
-        --section-space: 80px;
-      }
+    /* ボタン: 背景色トランジション + 矢印スライド */
+    .btn-primary::after {
+      content: "\2192";
+      margin-left: 0.5em;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .btn-primary:hover::after,
+    .btn-primary:focus-visible::after {
+      transform: translateX(4px);
+    }
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: #665847;
+    }
 
+    /* 画像hover: scale(1.03) / 0.5s（親は overflow:hidden 済み） */
+    .concept-image img,
+    .feature-image img,
+    .gallery-card img,
+    .staff-card img,
+    .photo-item img {
+      transition: transform 0.5s ease;
+    }
+    .concept-image:hover img,
+    .feature-image:hover img,
+    .gallery-card:hover img,
+    .staff-card:hover img,
+    .photo-item:hover img {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 1024px) {
       .access-layout {
         grid-template-columns: 1fr;
       }
@@ -1154,6 +1208,15 @@
         opacity: 1;
         transform: none;
       }
+
+      .hero-stack > * {
+        opacity: 1;
+        animation: none;
+      }
+
+      .hero-media img {
+        animation: none;
+      }
     }
   
     /* ヘッダーコントラスト改善 */
@@ -1246,7 +1309,7 @@
   <main id="main">
     <section class="hero" aria-label="BLOOMのメインビジュアル">
       <div class="hero-media">
-        <img src="assets/images/hero.webp" alt="BLOOMのメインビジュアル" width="1200" height="1600">
+        <img src="assets/images/hero.webp" alt="BLOOMのメインビジュアル" width="1200" height="1600" fetchpriority="high">
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content">
@@ -1280,7 +1343,7 @@
         </div>
 
         <div class="concept-grid">
-          <article class="concept-item">
+          <article class="concept-item fade-in">
             <div>
               <span class="concept-label" lang="en">Consultation</span>
               <h3>髪質と骨格、その日の気分まで受けとめるカウンセリング</h3>
@@ -1291,7 +1354,7 @@
             </div>
           </article>
 
-          <article class="concept-item">
+          <article class="concept-item fade-in">
             <div>
               <span class="concept-label" lang="en">Repair</span>
               <h3>髪質改善を軸に、きれいが長く続くコンディションづくり</h3>
@@ -1302,7 +1365,7 @@
             </div>
           </article>
 
-          <article class="concept-item">
+          <article class="concept-item fade-in">
             <div>
               <span class="concept-label" lang="en">Balance</span>
               <h3>ヘアだけで終わらない、全体の印象まで整うトータルビューティー</h3>
@@ -1327,7 +1390,7 @@
         </div>
 
         <div class="features-list">
-          <article class="feature-item">
+          <article class="feature-item fade-in">
             <div class="feature-image">
               <img src="assets/images/gallery-4.webp" alt="洗練されたスタイル提案のイメージ" width="900" height="675" loading="lazy">
             </div>
@@ -1339,7 +1402,7 @@
             </div>
           </article>
 
-          <article class="feature-item">
+          <article class="feature-item fade-in">
             <div class="feature-image">
               <img src="assets/images/gallery-1.webp" alt="髪質改善に寄り添う施術のイメージ" width="900" height="675" loading="lazy">
             </div>
@@ -1351,7 +1414,7 @@
             </div>
           </article>
 
-          <article class="feature-item">
+          <article class="feature-item fade-in">
             <div class="feature-image">
               <img src="assets/images/gallery-6.webp" alt="落ち着いたサロン空間のイメージ" width="900" height="675" loading="lazy">
             </div>
@@ -1451,23 +1514,23 @@
         </div>
 
         <div class="gallery-scroll">
-          <article class="gallery-card">
+          <article class="gallery-card fade-in">
             <img src="assets/images/style-1.webp" alt="柔らかなロングレイヤーのスタイル写真" width="260" height="347" loading="lazy">
             <p class="gallery-caption" lang="en">Soft Layer</p>
           </article>
-          <article class="gallery-card">
+          <article class="gallery-card fade-in">
             <img src="assets/images/style-2.webp" alt="艶感のあるボブスタイル写真" width="260" height="347" loading="lazy">
             <p class="gallery-caption" lang="en">Polished Bob</p>
           </article>
-          <article class="gallery-card">
+          <article class="gallery-card fade-in">
             <img src="assets/images/style-3.webp" alt="透明感カラーのミディアムスタイル写真" width="260" height="347" loading="lazy">
             <p class="gallery-caption" lang="en">Sheer Beige</p>
           </article>
-          <article class="gallery-card">
+          <article class="gallery-card fade-in">
             <img src="assets/images/style-4.webp" alt="やわらかなパーマスタイル写真" width="260" height="347" loading="lazy">
             <p class="gallery-caption" lang="en">Airy Perm</p>
           </article>
-          <article class="gallery-card">
+          <article class="gallery-card fade-in">
             <img src="assets/images/style-5.webp" alt="品のあるショートスタイル写真" width="260" height="347" loading="lazy">
             <p class="gallery-caption" lang="en">Clean Short</p>
           </article>
@@ -1486,21 +1549,21 @@
         </div>
 
         <div class="staff-list">
-          <article class="staff-card">
+          <article class="staff-card fade-in">
             <img src="assets/images/staff-1.webp" alt="志水 澪・オーナースタイリスト" width="400" height="500" loading="lazy">
             <h3>志水 澪</h3>
             <p class="staff-role" lang="en">Owner Stylist</p>
             <p class="staff-message">お客様一人ひとりの髪質と骨格に寄り添ったスタイル提案を大切にしています。</p>
           </article>
 
-          <article class="staff-card">
+          <article class="staff-card fade-in">
             <img src="assets/images/staff-2.webp" alt="蓮見 柚葉・スタイリスト" width="400" height="500" loading="lazy">
             <h3>蓮見 柚葉</h3>
             <p class="staff-role" lang="en">Stylist</p>
             <p class="staff-message">髪のお悩みを丁寧にお伺いし、扱いやすく長持ちするスタイルをお作りします。</p>
           </article>
 
-          <article class="staff-card">
+          <article class="staff-card fade-in">
             <img src="assets/images/staff-3.webp" alt="中村 葵・アシスタント" width="400" height="500" loading="lazy">
             <h3>中村 葵</h3>
             <p class="staff-role" lang="en">Assistant</p>
@@ -1522,27 +1585,27 @@
         </div>
 
         <div class="photo-grid">
-          <article class="photo-item">
+          <article class="photo-item fade-in">
             <img src="assets/images/interior-1.webp" alt="受付カウンターのイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Reception</span>
           </article>
-          <article class="photo-item">
+          <article class="photo-item fade-in">
             <img src="assets/images/interior-2.webp" alt="セット面のイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Styling Area</span>
           </article>
-          <article class="photo-item">
+          <article class="photo-item fade-in">
             <img src="assets/images/interior-3.webp" alt="シャンプーブースのイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Spa Room</span>
           </article>
-          <article class="photo-item">
+          <article class="photo-item fade-in">
             <img src="assets/images/interior-4.webp" alt="待合スペースのイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Lounge</span>
           </article>
-          <article class="photo-item">
+          <article class="photo-item fade-in">
             <img src="assets/images/interior-5.webp" alt="施術風景のイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Session</span>
           </article>
-          <article class="photo-item">
+          <article class="photo-item fade-in">
             <img src="assets/images/interior-6.webp" alt="店内ディテールのイメージ写真" width="400" height="300" loading="lazy">
             <span class="photo-caption" lang="en">Details</span>
           </article>
@@ -1789,6 +1852,14 @@
       window.addEventListener("scroll", onScroll, { passive: true });
 
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const revealGroups = new Map();
+        fadeTargets.forEach((el) => {
+          const parent = el.parentElement;
+          const idx = revealGroups.get(parent) || 0;
+          el.style.setProperty("--reveal-delay", Math.min(idx * 0.1, 0.4) + "s");
+          revealGroups.set(parent, idx + 1);
+        });
+
         const observer = new IntersectionObserver((entries, currentObserver) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -1796,7 +1867,7 @@
               currentObserver.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.06 });
+        }, { threshold: 0.15 });
 
         fadeTargets.forEach((element) => observer.observe(element));
       } else {
