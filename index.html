@@ -1068,13 +1068,17 @@
         display: inline-flex;
       }
 
+      /* 背景は完全不透明にする。0.98 でもヒーローの白抜き大見出しがゴーストとして
+         透けて見え、メニュー項目の可読性が落ちる（iOS Safari / Chromium 両方で再現）。
+         位置は固定ヘッダーの実高に追従させる。--header-h(76px) は店舗説明が2行に
+         折り返した実高(91px)と一致せず、パネルがヘッダーの裏に潜っていた。 */
       .nav-wrap {
-        position: fixed;
-        inset: var(--header-h) 0 auto 0;
+        position: absolute;
+        inset: 100% 0 auto 0;
         display: grid;
         gap: 22px;
         padding: 24px 20px 32px;
-        background: rgba(var(--bg-rgb), 0.98);
+        background: var(--bg);
         border-bottom: 1px solid var(--line);
         transform: translateY(-120%);
         opacity: 0;
@@ -1308,9 +1312,12 @@
       }
 
       /* ヘッダーの店舗説明は2行に折り返る。既定のCJK改行だと「トータルビュ／ーティー」と
-         語中で切れるため、区切りのスペースでだけ改行させる。 */
+         語中で切れるため、区切りのスペースでだけ改行させる。
+         上の body, body * { overflow-wrap: anywhere } が keep-all を上書きして
+         語中改行を復活させるため、この要素だけ明示的に打ち消す。 */
       .brand-meta {
         word-break: keep-all;
+        overflow-wrap: normal;
       }
     }
 </style>
