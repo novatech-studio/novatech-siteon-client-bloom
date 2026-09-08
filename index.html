@@ -1257,6 +1257,13 @@
       overflow-wrap: anywhere;
     }
 
+    /* 1c. 日本語の禁則処理（cat9 改行）
+       overflow-wrap: anywhere は禁則を無視して折り返すため、長音符「ー」や
+       促音「ッ」、句読点が行頭に孤立する。line-break: strict で禁則を効かせる。 */
+    body {
+      line-break: strict;
+    }
+
     /* 横スクロールギャラリー内のカードは画面外に並ぶため IntersectionObserver が
        発火せず、opacity:0 のまま残る。スクロールで見えた瞬間に白紙になるため除外する。 */
     .gallery-scroll .fade-in {
