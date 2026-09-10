@@ -1374,6 +1374,13 @@
         overflow-wrap: normal;
       }
     }
+
+    /* 見出し末尾の長音符「ー」が行頭に孤立していた。mobile-safety の overflow-wrap: anywhere が禁則を無視して折るため、
+       この要素だけ文節を保ち、収まらないときだけ break-word に逃がす。 */
+    .concept-item h3 {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
 </style>
   <script type="application/ld+json">
     {
@@ -1508,7 +1515,7 @@
           <article class="concept-item fade-in">
             <div>
               <span class="concept-label" lang="en">Balance</span>
-              <h3>ヘアだけで終わらない、全体の印象まで整うトータルビューティー</h3>
+              <h3>ヘアだけで終わらない、全体の印象まで整う<wbr>トータルビューティー</h3>
               <p>髪型だけでなく、表情や装いにまでなじむバランスを見つめること。洗練されたモード感の中にもやわらかさを残し、毎日に自然と溶け込む美しさを一緒に育てていきます。</p>
             </div>
             <div class="concept-image">
